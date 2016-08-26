@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>jQuery Functions</title>
+		<link rel="stylesheet" type="text/css" href="jQuery_functions.css">
+
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$("#box").hide();
+
+				$(".focusToggle span").hide();
+
+				$(".banner h1").click(function(){
+					$(this).addClass("red");
+					console.log("red");
+				});
+
+				$(".banner p").click(function(){
+					$(this).text("This text was set.");
+					$(this).after("<p>This text was added using .after().</p>")
+				});
+
+				$(".banner .list").append("<li>This item was appended</li>");
+
+				$("#click").click(function(){
+			        $(this).data("greeting", "Hello World");
+			        alert($(this).data("greeting"));
+			    });
+
+			    $(".list li").hover(function(){
+			    	$(this).html("<li>Hello!</li>");
+			    	$(this).fadeOut( 100 );
+			    	$(this).fadeIn( 500 );
+			    });
+
+			    $("#box_button").click(function(){
+ 					$("#box").show();
+			    });
+
+			    $("#box").click(function(){
+				    alert("My name is " + $(this).attr("name"));  
+				}); 
+
+				$(".list li").before("<p>I am </p>");
+
+				 $("button").click(function(){
+        			$("input:text").val("John Smith");
+    			});
+				
+				$(".focus p").focus(function(){
+       				$(this).hide();
+   				 });
+
+				$("#hide_list").click(function(){
+					$(".list").toggle();
+				});
+
+				$(".slideup").click(function(){
+					$(".slide").slideUp("slow");
+				});
+					
+				$(".slidedown").click(function(){
+					$(".slide").slideDown("slow");
+				});	
+
+				$(".slidetogbutton").click(function(){
+					$(".slidetoggle").slideToggle("slow");
+				});
+
+
+			})
+
+		</script>
+
+
+	</head>
+	<body>
+		<div class="banner">
+			<h1>Add Class</h1>
+			<p>Set this text.</p>
+			<ul class="list">
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+			<button id="hide_list">Show/Hide the list</button>
+			<button id="click">Click me!</button>
+			
+			<button id="box_button">Show box div</button>
+			<div id="box" name="box">Box</div>
+			
+			<p>Name: <input type="text" name="user"></p>
+			<button>Set the value of the input field</button>
+
+			<div class="focus">
+				<p>Focus on me to hide the text.</p>
+			</div>
+
+			<p class="slide">Slide this paragraph.</p>
+			<button class="slideup">Slide up</button>
+			<button class="slidedown">Slide down</button>
+
+			<p class="slidetoggle">Slide and toggle this paragraph.</p>
+			<button class="slidetogbutton">This button toggles display!</button>
+
+		</div>
+	</body>
+</html>

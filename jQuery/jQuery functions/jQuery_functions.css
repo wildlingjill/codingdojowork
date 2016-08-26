@@ -1,0 +1,35 @@
+.red {
+	color: red;
+}
+
+#box {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	background-color: blue;
+	border: 1px solid black;
+}
+
+#box_button{
+	display: block;
+}
+
+#click {
+	display:block;
+}
+
+.list{
+	list-style: none;
+}
+
+.list li{
+	display: inline;
+}
+
+.list p{
+	display: inline;
+}
+
+.focusToggle span{
+	display: inline;
+}

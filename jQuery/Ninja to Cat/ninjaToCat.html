@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>ninjaToCat</title>
+
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$("#one").click(function() { 
+			    	var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src");     
+			    	_this.attr('src', swap).attr("data-alt-src",current);   
+				}); 
+
+				$("#two").click(function() { 
+			    	var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src");     
+			    	_this.attr('src', swap).attr("data-alt-src",current);   
+				}); 
+
+				$("#three").click(function() { 
+			    	var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src");     
+			    	_this.attr('src', swap).attr("data-alt-src",current);   
+				}); 
+
+				$("#four").click(function() { 
+			    	var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src");     
+			    	_this.attr('src', swap).attr("data-alt-src",current);   
+				}); 
+
+				$("#five").click(function() { 
+			    	var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src");     
+			    	_this.attr('src', swap).attr("data-alt-src",current);   
+				}); 
+
+			})
+
+		</script>
+		
+		<!-- Bootstrap CDN -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		
+		<!-- Own CSS stylesheet -->
+		<link rel="stylesheet" type="text/css" href="ninjaToCat.css">
+
+	</head>
+	<body>
+		<div class="page-header">
+  			<h1>Ninja to Cat puzzle</h1>
+		</div>
+
+		<div class="row">
+			<div class='col-sm-6 col-md-12 text-center'>
+				<img id="one" src="img/ninja0.png" data-alt-src="img/cat0.png" height=100 width=350>
+			</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6 col-md-12 text-center'>
+				<img id="two" src="img/ninja1.png" data-alt-src="img/cat1.png" height=100 width=350>
+			</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6 col-md-12 text-center'>
+				<img id="three" src="img/ninja2.png" data-alt-src="img/cat2.png" height=100 width=350>
+			</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6 col-md-12 text-center'>
+				<img id="four" src="img/ninja3.png" data-alt-src="img/cat3.png" height=100 width=350>
+			</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6 col-md-12 text-center'>
+				<img id="five" src="img/ninja4.png" data-alt-src="img/cat4.png" height=100 width=350>
+			</div>
+		</div>
+
+	</body>
+</html>

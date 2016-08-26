@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>Date Validations</title>
+
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<!-- jQuery UI CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+
+				$("button").click(function(){
+					if($("#name:text").is(":empty")){
+						alert("You must enter your name!");
+					} else if ($("#name").val() === ""){
+						$("form").submit(function(){
+							alert("Thanks " + $("#name") + "! Your cruise leaves on " + $("#from") + " and returns on " + $("#to") + "!");
+							return false;
+						});
+					}	
+				});
+				
+				$(function() {
+				    $( "#to, #from" ).datepicker();
+				});
+
+
+			})
+			
+
+		</script>
+
+		<!-- Bootstrap CDN -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+		<form>
+
+			<div class="form-group">
+			    <label for="from">Date from:</label>
+			    <input type="from" class="form-control" id="from">
+			</div>
+
+			<div class="form-group">
+			    <label for="to">Date to:</label>
+			    <input type="to" class="form-control" id="to">
+			</div>
+
+			<div class="form-group">
+			    <label for="name">Name:</label>
+			    <input type="name" class="form-control" id="name">
+			</div>
+		  		
+		  	<button type="submit" class="btn btn-default">Check dates!</button>
+
+		</form>
+  	</body>
+</html>

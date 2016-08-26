@@ -1,0 +1,258 @@
+html, body{
+	font-family: "arial", arial, verdana, sans-serif;
+	color: black;
+}
+
+.banner{
+	background: linear-gradient(to bottom, rgb(226,226,226), rgb(255,255,255));
+	font-weight: 900;
+	display:block;
+	width:970px;
+	position:relative;
+	margin: 0px;
+	padding: 0px;
+}
+
+.banner img{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-left: 10px;
+}
+
+.banner p{
+	background: linear-gradient(to bottom, rgb(231,231,231), rgb(242,242,242));
+	color: black;
+	text-align: right;
+	display: inline-block;
+	margin-top: 25px;
+	margin-left: 310px;
+	vertical-align: top;
+}
+
+
+.copy_banner{
+	display:block;
+	width: 970px;
+	height:40px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	background: linear-gradient(to bottom, rgb(228,234,238) 0%,rgb(228,234,238) 50%, rgb(212,219,225) 50%, rgb(228,234,238) 100%);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(186,186,186);
+}
+
+.copy_banner ul li a{
+	color: rgb(130,128,120);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.copy_banner ul li{
+	display:inline;
+	padding: 0px 10px;
+	margin-top: 100px;
+}
+
+.copy_banner ul li+li {
+	border-left: 1px solid grey;
+}
+
+.main_content{
+	background: linear-gradient(to right, rgb(0,0,0), rgb(45,45,43), rgb(0,0,0)); 
+	width: 970px;
+	height:600px;
+	vertical-align: top;
+}
+
+#main_image{
+	display: inline-block;
+	background-color: white;
+	padding: 5px;
+	margin: 20px 10px 0px 20px;
+}
+
+#info{
+	display:inline-block;
+	vertical-align: top;
+	padding-bottom: 10px;
+	background: linear-gradient(to right, rgb(82,82,80), rgb(42,42,42)); 
+	width:530px;
+	height: 260px;
+	font-size: 12px;
+	margin: 20px 10px 0px 0px;
+}
+
+#info h3{
+	background: linear-gradient(to bottom, rgb(247,202,50) 0%,rgb(247,202,50) 50%, rgb(246,190,0) 50%, rgb(247,202,50) 100%);
+	margin: 0px;
+	padding: 7px;
+	padding-left: 10px;
+	font-size: 12px;
+	color:black;
+}
+
+#info h4{
+	padding: 10px;
+	margin:0px;
+	color:white;
+}
+
+#info p{
+	padding: 10px;
+	margin: 0px;
+	color:white;
+}
+
+#info p span{
+	color:white;
+	font-weight: bold;
+}
+
+#ad_banner{
+	margin: 0px;
+	padding: 5px;
+	height: 20px;
+}
+
+#ad_banner img{
+	padding-left: 20px;
+	border-radius: 3px;
+}
+
+#ad_banner a{
+	font-size: 11px;
+	font-weight: lighter;
+	padding-left: 15px;
+	color: rgb(133,137,76);
+	text-decoration: none;
+	background: linear-gradient(to right, rgb(0,0,0), rgb(45,45,43)); 
+}
+
+#automotive{
+	display: inline-block;
+	vertical-align: top;
+	width: 221px;
+	margin: 0px 7px 0px 15px;
+	background-color: white;
+	height: 250px;
+}
+
+#automotive h3{
+	margin-top: 0px;
+	background: linear-gradient(to bottom, rgb(247,202,50) 0%,rgb(247,202,50) 50%, rgb(246,190,0) 50%, rgb(247,202,50) 100%);
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 7px;
+	padding-left: 10px;
+	font-size: 12px;
+	color:black;
+}
+
+#automotive p{
+	font-size: 11px;
+	padding:10px 15px;
+	margin: 0px;
+}
+
+#automotive input{
+	display: inline-block;
+	margin-left:120px;
+	margin-bottom:0px;
+}
+
+#commercial{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 7px 0px;
+	width: 221px;
+	background-color: white;
+	height: 250px;
+}
+
+#commercial h3{
+	background: linear-gradient(to bottom, rgb(247,202,50) 0%,rgb(247,202,50) 50%, rgb(246,190,0) 50%, rgb(247,202,50) 100%);
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 7px;
+	padding-left: 10px;
+	font-size: 12px;
+	color:black;
+}
+
+#commercial p{
+	font-size: 11px;
+	padding:10px 15px;
+	margin: 0px 0px 10px 0px;
+}
+
+#commercial input{
+	display: inline-block;
+	margin-left:120px;
+	margin-bottom:0px;
+}
+
+#industrial{
+	display: inline-block;
+	vertical-align: top;
+	width: 221px;
+	margin: 0px 7px 0px;
+	background-color: white;
+	height: 250px;
+}
+
+#industrial h3{
+	background: linear-gradient(to bottom, rgb(247,202,50) 0%,rgb(247,202,50) 50%, rgb(246,190,0) 50%, rgb(247,202,50) 100%);
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 7px;
+	padding-left: 10px;
+	font-size: 12px;
+	color:black;
+}
+
+#industrial p{
+	font-size: 11px;
+	padding:10px 15px;
+	margin: 0px;
+}
+
+#industrial input{
+	display: inline-block;
+	margin-left:120px;
+	margin-bottom:0px;
+}
+
+#diesel{
+	display: inline-block;
+	vertical-align: top;
+	width: 221px;
+	margin: 0px 7px 0px;
+	background-color: white;
+	height: 250px;
+}
+
+#diesel h3{
+	background: linear-gradient(to bottom, rgb(247,202,50) 0%,rgb(247,202,50) 50%, rgb(246,190,0) 50%, rgb(247,202,50) 100%);
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 7px;
+	padding-left: 10px;
+	font-size: 12px;
+	color:black;
+}
+
+#diesel p{
+	font-size: 11px;
+	padding:10px 15px;
+	margin: 0px;
+}
+
+#diesel input{
+	display: inline-block;
+	margin-left:120px;
+	margin-bottom:0px;
+}

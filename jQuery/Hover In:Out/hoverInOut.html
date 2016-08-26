@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>Hover In/Out</title>
+
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$("#one").hover(function(){
+					var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src"); 
+				    _this.attr('src', swap).attr("data-alt-src",current); 
+				    }, function(){ 
+				    _this.attr("data-alt-src", swap).attr("src", current); 
+				}); 
+				 
+
+				$("#two").hover(function(){
+					var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src"); 
+				    _this.attr('src', swap).attr("data-alt-src",current); 
+				    }, function(){ 
+				    _this.attr("data-alt-src", swap).attr("src", current); 
+				}); 
+
+				$("#three").hover(function(){
+					var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src"); 
+				    _this.attr('src', swap).attr("data-alt-src",current); 
+				    }, function(){ 
+				    _this.attr("data-alt-src", swap).attr("src", current); 
+				}); 
+
+				$("#four").hover(function(){
+					var _this = $(this);
+			    	var current = _this.attr("src");
+			    	var swap = _this.attr("data-alt-src"); 
+				    _this.attr('src', swap).attr("data-alt-src",current); 
+				    }, function(){ 
+				    _this.attr("data-alt-src", swap).attr("src", current); 
+				}); 
+ 
+
+			})
+
+		</script>
+		
+		<!-- Bootstrap CDN -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		
+		<!-- Own CSS stylesheet -->
+		<link rel="stylesheet" type="text/css" href="hoverInOut.css">
+
+	</head>
+	<body>
+		<div class="page-header">
+  			<h1>Hover In/Out</h1>
+		</div>
+
+		<div class="row">
+			<div class='col-sm-1 col-md-3 text-center'>
+				<img id="one" src="flower_closed.png" data-alt-src="flower_open.png" height=200 width=200>
+			</div>
+		
+			<div class='col-sm-1 col-md-3 text-center'>
+				<img id="two" src="flower_closed.png" data-alt-src="flower_open.png" height=200 width=200>
+			</div>
+		
+			<div class='col-sm-1 col-md-3 text-center'>
+				<img id="three" src="flower_closed.png" data-alt-src="flower_open.png" height=200 width=200>
+			</div>
+		
+			<div class='col-sm-1 col-md-3 text-center'>
+				<img id="four" src="flower_closed.png" data-alt-src="flower_open.png" height=200 width=200>
+			</div>
+		</div>
+
+	</body>
+</html>

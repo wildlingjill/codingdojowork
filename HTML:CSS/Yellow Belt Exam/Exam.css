@@ -1,0 +1,379 @@
+html, body{
+	font-family: "arial", arial, verdana, sans-serif;
+	color: black;
+	width: 970px;
+	height: 1300px;
+}
+
+#banner{
+	width:950px;
+	height: 39px;
+	position:relative;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(186,186,186);
+	border-radius: 5px;
+}
+
+#banner #nav{
+	display:block;
+	position:relative;
+	width: 750px;
+	height:39px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 200px;
+	margin-top: 0px;
+	background: linear-gradient(to bottom, rgb(244,246,244), rgb(216,217,218));
+}
+
+#banner #nav li img{
+	height: 39px;
+	width: 48px;
+	display:inline-block;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+}
+
+#banner #nav li a{
+	display: inline;
+	position:relative;
+	margin-right: 0px;
+	color: black;
+	font-size: 13px;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 10px 0px;
+	line-height: 39px;
+}
+
+#banner #nav li:nth-child(n+1){
+	margin-left: 30px;
+}
+
+
+#banner #nav li{
+	display:inline;
+	margin-top: 100px;
+	line-height: 39px;
+	width: 100px;
+	padding-right: 20px;
+}
+
+#banner #nav li+li{
+	border-right: 1px solid grey;
+}
+
+#banner #search_bar{
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 70px;
+	width: 100px;
+}
+
+#banner #search_bar input{
+	border-radius: 100px;
+	border: 1px solid grey;
+}
+
+#search_bar img{
+	display:inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-bottom: 1px;
+}
+
+#banner #search_bar button{
+	display:inline-block;
+	position: absolute;
+	top:0px;
+	left:110px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#main_image{
+	position:relative;
+	width: 970px;
+}
+
+#main_image img{
+	display: inline-block;
+	margin: 20px 40px;
+}
+
+#main_image #picture_nav{
+	display:block;
+	position:absolute;
+	top: 403px;
+	left:40px;
+	width: 899px;
+	height:29px;
+	padding-left: 0px;
+	padding-top: 0px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(186,186,186);
+	border-radius: 5px;
+	background: linear-gradient(to bottom, rgb(58,62,60), rgb(47,47,48));
+}
+
+#main_image #picture_nav li a{
+	display: inline;
+	position:relative;
+	margin-left: 10px;
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 0px 10px;
+	margin-top: 10px;
+}
+
+#main_image #picture_nav li{
+	display:inline;
+	margin-top: 100px;
+}
+
+#main_image #browse_store{
+	display: inline-block;
+	position: absolute;
+	left:40px;
+	margin: 20px 0px;
+	border: 1px solid lightgrey;
+	width: 900px;
+}
+
+#main_image #browse_store h3{
+	display: inline-block;
+	position: absolute;
+	left: 120px;
+	padding-right: 30px;
+	border-right: 1px solid lightgrey;
+	color: lightgrey;
+	font-size: 25px;
+	font-weight:lighter;
+	margin-top: 15px;
+}
+
+#main_image #browse_store button{
+	display:inline-block;
+	position: absolute;
+	right: 120px;
+	top: 15px;
+    height: 30px;
+    width: 160px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-size: 12px;
+    background: linear-gradient(to bottom, rgb(61,190,255), rgb(36,104,174));
+}
+
+#main_image #blue_chevrons{
+    color: rgb(133,195,240)
+}
+
+.pages{
+	margin-top: 100px;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 300px;
+	
+}
+
+.pages img{
+	position: absolute;
+	bottom: 100px;
+	left: 30px;
+	height: 100px;
+	width: 152px;
+}
+
+.pages button{
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    bottom: 35px;
+    height: 22px;
+    width: 160px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-size: 12px;
+    background: linear-gradient(to bottom, rgb(61,190,255), rgb(36,104,174));
+}
+
+.pages p{
+	font-size: 11px;
+	padding-left: 15px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	margin-top: 50px;
+}
+
+
+.pages h4{
+	font-size: 13px;
+	display: inline-block;
+	position:absolute;
+	top: 20px;
+	left: 40px;
+	margin: 0px;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+.pages .icon{
+	display: inline-block;
+	position:absolute;
+	top: 20px;
+	left: 20px;
+	height:25px;
+	width: 25px;
+}
+
+.pages #video{
+	position: absolute;
+	left: 50px;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid lightgrey;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+}
+
+.pages #tour{
+	position: absolute;
+	left: 270px;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid lightgrey;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+}
+
+.pages #trial{
+	position: absolute;
+	left: 490px;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid lightgrey;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+}
+
+.pages #buy{
+	position: absolute;
+	left: 710px;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid lightgrey;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+}
+
+#empty_box{
+	display: inline-block;
+	position: absolute;
+	left: 58px;
+	top: 914px;
+	height: 30px;
+	width: 880px;
+	border: 1px solid lightgrey;
+	margin-bottom: 20px;
+}
+
+.links{
+	margin-top: 70px;
+	margin-left: 85px;
+	display: block;
+	position: relative;
+}
+
+.links .list h5{
+	border-bottom: 1px solid lightgrey;
+	padding-bottom: 20px;
+}
+
+.links .list{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	width: 150px;
+}
+
+.links .list h5{
+	font-size: 11px;
+}
+
+.links .list ul{
+	list-style: none;
+	padding-left: 0px;
+	margin: 0px;
+	display: inline-block;
+	position: absolute;
+}
+
+.links .list ul li a{
+	color: black;
+	text-decoration: none;
+	font-size: 10px;
+}
+
+.links .list #About{
+	left: 0px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.links .list #Platform{
+	margin-left: 150px;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+.links .list #Store{
+	margin-left: 300px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.links .list #Support{
+	margin-left: 450px;
+	display: inline-block;
+	vertical-align: top;
+	top: 100px;
+}
+
+.links .list #Community{
+	margin-left: 600px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.links .list #Oaktree{
+	margin-left: 750px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.links h6{
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	top: 250px;
+	width: 850px;
+	font-weight: lighter;
+	border-top: 1px solid lightgrey;
+	padding-top: 20px;
+}

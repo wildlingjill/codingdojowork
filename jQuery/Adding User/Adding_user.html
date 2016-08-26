@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>addingUsers</title>
+
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+		function fillTable(){
+			$("tbody").append("<td>" + $("#firstname").val() + "</td>");
+			$("tbody").append("<td>" +  $("#lastname").val() + "</td>");
+			$("tbody").append("<td>" + $("#email").val() + "</td>");
+			$("tbody").append("<td>" + $("#contactnumber").val() + "</td>");
+		}
+		
+
+
+		// $tr.append($("<td />", { text: $("#test1").val() }))
+
+			$(document).ready(function(){
+
+
+				$("button").click(function(){
+					$("form").submit(function(){
+						$("tbody").append("<tr>");
+						function fillTable(){
+							$("tbody").append("<td>" + $("#firstname").val() + "</td>");
+							$("tbody").append("<td>" +  $("#lastname").val() + "</td>");
+							$("tbody").append("<td>" + $("#email").val() + "</td>");
+							$("tbody").append("<td>" + $("#contactnumber").val() + "</td>");
+						}
+						$("tbody").append("</tr>")
+						return false;
+					});
+				});
+
+
+			})
+
+		</script>
+		
+		<!-- Bootstrap CDN -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		
+		<!-- Own CSS stylesheet -->
+		<!-- <link rel="stylesheet" type="text/css" href="ninjaToCat.css"> -->
+
+	</head>
+	<body>
+		<div class="container">
+		 	<h2>Adding users to a table</h2>
+		 	<table class="table table-bordered">
+		    	<thead>
+		    		<tr>
+				        <th class="fname">First Name</th>
+				        <th class="lname">Last Name</th>
+				        <th class="eml">Email</th>
+				        <th class="cnum">Contact Number</th>
+		      		</tr>
+		    	</thead>
+		    <tbody>
+
+		    </tbody>
+		</table>
+	</div>
+
+	<div class="container">
+		<form>
+			<div class="form-group">
+    			<label for="firstname">First Name:</label>
+    			<input type="firstname" id="firstname" placeholder="Enter first name">
+    		</div>
+    		<div class="form-group">
+      			<label for="lastname">Last Name:</label>
+    			<input type="lastname" id="lastname" placeholder="Enter last name">
+    		</div>
+    		<div class="form-group">
+      			<label for="email">Email:</label>
+      			<input type="email" id="email" placeholder="Enter email">
+    		</div>
+    		<div class="form-group">
+      			<label for="contactnumber">Contact Number:</label>
+      			<input type="contactnumber" id="contactnumber" placeholder="Enter contact number">
+    		</div>
+    		<button type="submit" class="btn btn-default">Submit</button>
+  		</form>
+	</div>
+
+
+	</body>
+</html>

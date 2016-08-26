@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Pacman Demo</title>
+
+		<style type = "text/css">
+
+			body {
+				background-color: black;
+				margin: 0px;
+			}
+
+			/*div#world{
+				position:relative;
+			}*/
+
+			div.row div {
+				width: 20px;
+				height: 20px;
+				margin:0px;
+				padding: 0px;
+				display: inline-block;
+			}
+
+			div.row{
+				height:20px;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			div.brick{
+				background-color: blue;
+			}
+
+			div.coin{
+				background: url("coin.gif");
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			div.empty{
+			
+			}
+
+			div#pacman{
+				background: url("pacman.gif");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 20px;
+				height:20px;
+				position:absolute;
+			}
+
+			div#score{
+				border:1px solid white;
+				width: 30px;
+				height: 20px; 
+				color: white;
+				padding: 7px;
+				text-align: center;
+				position:absolute;
+				top: 10px;
+				left: 410px;
+			}
+
+
+		</style>
+
+	</head>
+	<body>
+
+	<div id="container">
+
+		<div id="world"></div>
+
+		<div id="pacman"></div>
+
+		<div id="score">0</div>
+	</div>
+
+		<!-- <div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="pacman"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+		</div>
+
+		<div class="row">
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="empty"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+
+		<div class="row">
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="empty"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="empty"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+		</div>
+
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div> -->
+
+		<!-- Have JS display the bricks/coin etc - DONE-->
+		<!-- Have the pacman move up and down -->
+
+		<script>
+
+			var world = [ 
+			// 2 is a brick, 1 is a coin, 0 is an empty square
+				[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+				[2,0,1,1,1,1,1,1,1,0,1,1,1,0,1,1,1,1,1,2],
+				[2,1,1,2,2,2,2,2,2,1,1,1,1,2,2,2,2,1,0,2],
+				[2,1,1,2,0,0,0,0,2,1,1,1,1,2,0,0,2,1,1,2],
+				[2,1,1,2,2,2,2,2,2,1,1,1,1,2,0,0,2,1,1,2],
+				[2,1,1,1,0,1,1,1,1,1,0,1,1,2,0,0,2,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,1,1,2],
+				[2,0,1,1,1,2,1,0,1,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,0,1,2],
+				[2,1,1,2,2,2,2,2,2,1,1,2,2,2,2,2,2,2,1,2],
+				[2,1,1,1,1,1,1,2,1,0,1,1,2,1,1,1,2,1,1,2],
+				[2,1,1,0,1,1,1,1,1,1,1,1,2,0,1,1,2,1,0,2],
+				[2,1,1,1,1,1,0,1,1,1,1,1,2,2,1,1,2,1,1,2],
+				[2,1,1,2,2,2,2,1,1,1,0,1,1,1,1,0,1,1,1,2],
+				[2,1,1,2,0,0,2,1,1,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,2,0,0,2,1,0,1,1,1,2,2,2,1,1,1,1,2],
+				[2,1,1,2,2,2,2,1,1,1,1,1,2,0,2,1,0,1,1,2],
+				[2,0,1,1,1,1,1,1,1,1,0,1,2,0,2,1,1,1,1,2],
+				[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+			];
+
+			var score = 0;
+
+			var pacman = {
+				x: 1,
+				y: 1
+			};
+
+			function displayWorld(){
+				var output=" ";
+
+				for(var i=0; i<world.length; i++){
+					output += "\n<div class='row'>\n";
+					for (var j=0; j<world[i].length; j++){
+						if(world[i][j] == 2)
+							output += "<div class='brick'></div>";
+						else if(world[i][j] == 1)
+							output += "<div class='coin'></div>";
+						if(world[i][j] == 0)
+							output += "<div class='empty'></div>";
+						 
+					}
+					output += "\n</div>";
+				}
+				// console.log(output);
+				document.getElementById("world").innerHTML = output;
+			}
+				
+		function displayPacman(){
+			document.getElementById('pacman').style.left = pacman.x*20 + "px";
+			document.getElementById('pacman').style.top = pacman.y*20 + "px";
+		};
+
+		function displayScore(){
+			document.getElementById('score').innerHTML = score;
+		};
+
+		displayWorld();
+		displayPacman();
+		displayScore();
+
+		document.onkeydown = function(e){
+			if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2){
+				pacman.x--;
+			}
+			else if (e.keyCode == 39 && world[pacman.y][pacman.x+1] != 2){
+				pacman.x++;
+			}
+			else if (e.keyCode == 38 && world[pacman.y-1][pacman.x] != 2){
+				pacman.y--;
+			}
+			else if (e.keyCode == 40 && world[pacman.y+1][pacman.x] != 2){
+				pacman.y++;
+			}
+
+			if(world[pacman.y][pacman.x] == 1){
+				world[pacman.y][pacman.x] = 0;
+				score += 10;
+				displayWorld();
+				displayScore();
+			}
+
+			// console.log(e.keyCode);
+
+			displayPacman();
+		}
+		</script>
+
+
+	</body>
+</html>

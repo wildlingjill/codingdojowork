@@ -1,0 +1,46 @@
+
+#square {
+	display: inline-block;
+	width: 140px;
+	height:140px;
+	background:blue;
+}
+
+#circle {
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+
+	/* Rounds edges completely to make circle */
+	border-radius: 100px;
+	background: red;
+}
+
+#up_triangle {
+	display: inline-block;
+	width: 0;
+	height: 0;
+
+	/* Properties responsible for hiding corners to make triangle */
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-bottom: 140px solid green;
+}
+
+#pacman {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+
+	/* Properties responsible for making cut-out triangle */ 
+	border-right: 60px solid transparent;
+	border-top: 60px solid purple;
+	border-left: 60px solid purple;
+	border-bottom: 60px solid purple;
+
+	/* Properties responsible for hiding corners of square to make cicle */
+	border-top-left-radius: 60px;
+	border-top-right-radius: 60px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 60px;
+}

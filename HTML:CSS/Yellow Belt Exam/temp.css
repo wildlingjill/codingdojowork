@@ -1,0 +1,82 @@
+.links{
+	margin-top: 100px;
+	text-align: left;
+	display: inline-block;
+	position: absolute;
+	top: 900px;
+	width: 970px;
+
+}
+
+.links .list_header{
+	width: 200px;
+}
+
+.links .list ul{
+	list-style: none;
+	padding-left: 0px;
+	margin: 0px;
+	display: inline-block;
+	position: relative;
+	width: 100px;
+	
+}
+
+.links .list li a{
+	text-decoration: none;
+	color: black;
+}
+
+.links .list #About{
+	position: absolute;
+	left: 0px;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+.links .list #Platform{
+	position: absolute;
+	left: 20px;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+.links .list #Store{
+	position: absolute;
+	left: 40px;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+.links .list #Support{
+	position: absolute;
+	left: 60px;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+.links .list #Community{
+	position: absolute;
+	left: 80px;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+.links .list #Oaktree{
+	position: absolute;
+	left: 100px;
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+
+.links h6{
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+}
