@@ -9,8 +9,9 @@
 
     <body>
 
-    	<div class="rows">
-	    	<h6 id="group_period">Group Period</h6>
+    	<div class="columns">
+	    	<h4 class="group_period" id="group">Group</h4>
+	    	<h4 class="group_period" id="period">Period</h4>
 	    	<ol id="group">
 	    		<li>1</li>
 	    		<li>2</li>
@@ -33,7 +34,7 @@
 	    	</ol>
 	    </div>
 
-	    <div class="columns">
+	    <div class="rows">
 	    	<ol id="period">
 	    		<li>1</li>
 	    		<li>2</li>
@@ -44,45 +45,217 @@
 	    		<li>7</li>
 	    	</ol>
 	    </div>
+
+	    <div class="lanth_act">
+	    	<ul>
+	    		<li id="lanth">*Lanthanoids</li>
+	    		<li id="act">**Actinoids</li>
+	    	</ul>
+	    	<ul>
+	    		<li>*</li>
+	    		<li>**</li>
+	    	</ul>
+	    </div>
+
 	    <div class="table">
 
-	    <!--div class="blue">
-	    	<ul id="blue1">
-		    	<li id="H"> <p>1</p> <h4>H</h4> <p>1.008</p>
-		    	<li id="Li"> <p>3</p> <h4>Li</h4> <p>6.94</p>
-				<li id="Na"> <p>11</p> <h4>Na</h4> <p>22.990</p>
-				<li id="K"> <p>19</p> <h4>K</h4> <p>39.098</p>
-				<li id="Rb"> <p>37</p> <h4>Rb</h4> <p>85.468</p>
-				<li id="Cs"> <p>55</p> <h4>Cs</h4> <p>132.91</p>
-				<li id="Fr"> <p>87</p> <h4>Fr</h4> <p>[223.02]</p>
-			</ul>
-			<ul id="blue2">
-				<li id="Be"> <p>4</p> <h4>Br</h4> <p>9.0122</p>
-				<li id="Mg"> <p>12</p> <h4>Mg</h4> <p>24.305</p>
-				<li id="Ca"> <p>20</p> <h4>Ca</h4> <p>40.078</p>
-				<li id="Sr"> <p>38</p> <h4>Sr</h4> <p>87.62</p>
-				<li id="Ba"> <p>57</p> <h4>Ba</h4> <p>137.33</p>
-				<li id="Ra"> <p>88</p> <h4>Ra</h4> <p>[226.03]</p>
-			</ul>
-		</div>
-		<div class="pink">
-			<ul id="pink1">
-				<li id="Sc"> <p>21</p> <h4>Sc</h4> <p>44.956</p>
-				<li id="Y"> <p>39</p> <h4>Y</h4> <p>88.906</p>
-				<li id="Lu"> <p>71</p> <h4>Lu</h4> <p>174.97</p>
-				<li id="Lr"> <p>103</p> <h4>Lr</h4> <p>[262.11]</p>
-			</ul>
-			<ul id="pink2">
-				<li id="Ti"> <p>22</p> <h4>Ti</h4> <p>47.867</p>
-				<li id="Zr"> <p>40</p> <h4>Zr</h4> <p>91.224</p>
-				<li id="Hf"> <p>72</p> <h4>Hf</h4> <p>178.49</p>
-				<li id="Rf"> <p>104</p> <h4>Rf</h4> <p>[265.12]</p>
-			</ul>
-			<ul id="pink3">
-				<li id="V"> <p>23</p> <h4>V</h4> <p>50.942</p>
-				<li id="Nb"> <p>41</p> <h4>Nb</h4> <p>92.906</p>
+		    <div class="blue">
+		    	<ul id="blue1">
+			    	<li class = "element" id="H"> <p class="p1">1</p> <h4>H</h4> <p class="p2">1.008</p></li>
+			    	<li class = "element" id="Li"> <p class="p1">3</p> <h4>Li</h4> <p class="p2">6.94</p></li>
+					<li class = "element" id="Na"> <p class="p1">11</p> <h4>Na</h4> <p class="p2">22.990</p></li>
+					<li class = "element" id="K"> <p class="p1">19</p> <h4>K</h4> <p class="p2">39.098</p></li>
+					<li class = "element" id="Rb"> <p class="p1">37</p> <h4>Rb</h4> <p class="p2">85.468</p></li>
+					<li class = "element" id="Cs"> <p class="p1">55</p> <h4>Cs</h4> <p class="p2">132.91</p></li>
+					<li class = "element" id="Fr"> <p class="p1">87</p> <h4>Fr</h4> <p class="p2">[223.02]</p></li>
+				</ul>
+				<ul id="blue2">
+					<li class = "element" id="Be"> <p class="p1">4</p> <h4>Be</h4> <p class="p2">9.0122</p></li>
+					<li class = "element" id="Mg"> <p class="p1">12</p> <h4>Mg</h4> <p class="p2">24.305</p></li>
+					<li class = "element" id="Ca"> <p class="p1">20</p> <h4>Ca</h4> <p class="p2">40.078</p></li>
+					<li class = "element" id="Sr"> <p class="p1">38</p> <h4>Sr</h4> <p class="p2">87.62</p></li>
+					<li class = "element" id="Ba"> <p class="p1">57</p> <h4>Ba</h4> <p class="p2">137.33</p></li>
+					<li class = "element" id="Ra"> <p class="p1">88</p> <h4>Ra</h4> <p class="p2">[226.03]</p></li>
+				</ul>
+			</div>
 
-		-->
-	    </div>
+
+			<div class="pink">
+				<ul id="pink1">
+					<li class = "element" id="Sc"> <p class="p1">21</p> <h4>Sc</h4> <p class="p2">44.956</p></li>
+					<li class = "element" id="Y"> <p class="p1">39</p> <h4>Y</h4> <p class="p2">88.906</p></li>
+					<li class = "element" id="Lu"> <p class="p1">71</p> <h4>Lu</h4> <p class="p2">174.97</p></li>
+					<li class = "element" id="Lr"> <p class="p1">103</p> <h4>Lr</h4> <p class="p2">[262.11]</p></li>
+				</ul>
+				<ul id="pink2">
+					<li class = "element" id="Ti"> <p class="p1">22</p> <h4>Ti</h4> <p class="p2">47.867</p></li>
+					<li class = "element" id="Zr"> <p class="p1">40</p> <h4>Zr</h4> <p class="p2">91.224</p></li>
+					<li class = "element" id="Hf"> <p class="p1">72</p> <h4>Hf</h4> <p class="p2">178.49</p></li>
+					<li class = "element" id="Rf"> <p class="p1">104</p> <h4>Rf</h4> <p class="p2">[265.12]</p></li>
+				</ul>
+				<ul id="pink3">
+					<li class = "element" id="V"> <p class="p1">23</p> <h4>V</h4> <p class="p2">50.942</p></li>
+					<li class = "element" id="Nb"> <p class="p1">41</p> <h4>Nb</h4> <p class="p2">92.906</p></li>
+					<li class = "element" id="Ta"> <p class="p1">73</p> <h4>Ta</h4> <p class="p2">180.95</p></li>
+					<li class = "element" id="Db"> <p class="p1">105</p> <h4>Db</h4> <p class="p2">[268.13]</p></li>
+				</ul>
+				<ul id="pink4">
+					<li class = "element" id="Cr"> <p class="p1">24</p> <h4>Cr</h4> <p class="p2">51.996</p></li>
+					<li class = "element" id="Mo"> <p class="p1">42</p> <h4>Mo</h4> <p class="p2">95.96</p></li>
+					<li class = "element" id="W"> <p class="p1">74</p> <h4>W</h4> <p class="p2">183.84</p></li>
+					<li class = "element" id="Sg"> <p class="p1">106</p> <h4>Sg</h4> <p class="p2">[271.13]</p></li>
+				</ul>
+				<ul id="pink5">
+					<li class = "element" id="Mn"> <p class="p1">25</p> <h4>Mn</h4> <p class="p2">54.938</p></li>
+					<li class = "element" id="Tc"> <p class="p1">43</p> <h4>Tc</h4> <p class="p2">[97.91]</p></li>
+					<li class = "element" id="Re"> <p class="p1">75</p> <h4>Re</h4> <p class="p2">186.21</p></li>
+					<li class = "element" id="Bh"> <p class="p1">107</p> <h4>Bh</h4> <p class="p2">[270]</p></li>
+				</ul>
+				<ul id="pink6">
+					<li class = "element" id="Fe"> <p class="p1">26</p> <h4>Fe</h4> <p class="p2">55.845</p></li>
+					<li class = "element" id="Ru"> <p class="p1">44</p> <h4>Ru</h4> <p class="p2">101.07</p></li>
+					<li class = "element" id="Os"> <p class="p1">76</p> <h4>Os</h4> <p class="p2">190.23</p></li>
+					<li class = "element" id="Hs"> <p class="p1">108</p> <h4>Hs</h4> <p class="p2">[277.15]</p></li>
+				</ul>
+				<ul id="pink7">
+					<li class = "element" id="Co"> <p class="p1">27</p> <h4>Co</h4> <p class="p2">58.933</p></li>
+					<li class = "element" id="Rh"> <p class="p1">45</p> <h4>Rh</h4> <p class="p2">102.91</p></li>
+					<li class = "element" id="Ir"> <p class="p1">77</p> <h4>Ir</h4> <p class="p2">192.22</p></li>
+					<li class = "element" id="Mt"> <p class="p1">109</p> <h4>Mt</h4> <p class="p2">[276.15]</p></li>
+				</ul>
+				<ul id="pink8">
+					<li class = "element" id="Ni"> <p class="p1">28</p> <h4>Ni</h4> <p class="p2">58.693</p></li>
+					<li class = "element" id="Pd"> <p class="p1">46</p> <h4>Pd</h4> <p class="p2">106.42</p></li>
+					<li class = "element" id="Pt"> <p class="p1">78</p> <h4>Pt</h4> <p class="p2">195.08</p></li>
+					<li class = "element" id="Ds"> <p class="p1">110</p> <h4>Ds</h4> <p class="p2">[281.16]</p></li>
+				</ul>
+				<ul id="pink9">
+					<li class = "element" id="Cu"> <p class="p1">29</p> <h4>Cu</h4> <p class="p2">63.546</p></li>
+					<li class = "element" id="Ag"> <p class="p1">47</p> <h4>Ag</h4> <p class="p2">107.87</p></li>
+					<li class = "element" id="Au"> <p class="p1">79</p> <h4>Au</h4> <p class="p2">196.97</p></li>
+					<li class = "element" id="Rg"> <p class="p1">111</p> <h4>Rg</h4> <p class="p2">[280.16]</p></li>
+				</ul>
+				<ul id="pink10">
+					<li class = "element" id="Zn"> <p class="p1">30</p> <h4>Zn</h4> <p class="p2">65.38</p></li>
+					<li class = "element" id="Cd"> <p class="p1">48</p> <h4>Cd</h4> <p class="p2">112.41</p></li>
+					<li class = "element" id="Hg"> <p class="p1">80</p> <h4>Hg</h4> <p class="p2">200.59</p></li>
+					<li class = "element" id="Cn"> <p class="p1">112</p> <h4>Cn</h4> <p class="p2">[285.17]</p></li>
+				</ul>
+			</div>
+
+
+			<div class="yellow">
+				<ul id="yellow1">
+					<li class = "element" id="B"> <p class="p1">5</p> <h4>B</h4> <p class="p2">10.81</p></li>
+					<li class = "element" id="Al"> <p class="p1">13</p> <h4>Al</h4> <p class="p2">26.982</p></li>
+					<li class = "element" id="Ga"> <p class="p1">31</p> <h4>Ga</h4> <p class="p2">69.723</p></li>
+					<li class = "element" id="In"> <p class="p1">49</p> <h4>In</h4> <p class="p2">114.82</p></li>
+					<li class = "element" id="Tl"> <p class="p1">81</p> <h4>Tl</h4> <p class="p2">204.38</p></li>
+					<li class = "element" id="Uut"> <p class="p1">113</p> <h4>Uut</h4> <p class="p2">[284.18]</p></li>
+				</ul>
+				<ul id="yellow2">
+					<li class = "element" id="C"> <p class="p1">6</p> <h4>C</h4> <p class="p2">12.011</p></li>
+					<li class = "element" id="Si"> <p class="p1">14</p> <h4>Si</h4> <p class="p2">28.085</p></li>
+					<li class = "element" id="Ge"> <p class="p1">32</p> <h4>Ge</h4> <p class="p2">72.63</p></li>
+					<li class = "element" id="Sn"> <p class="p1">50</p> <h4>Sn</h4> <p class="p2">118.71</p></li>
+					<li class = "element" id="Pb"> <p class="p1">82</p> <h4>Pb</h4> <p class="p2">207.2</p></li>
+					<li class = "element" id="Fl"> <p class="p1">114</p> <h4>Fl</h4> <p class="p2">[289.19]</p></li>
+				</ul>
+				<ul id="yellow3">
+					<li class = "element" id="N"> <p class="p1">7</p> <h4>N</h4> <p class="p2">14.007</p></li>
+					<li class = "element" id="P"> <p class="p1">15</p> <h4>P</h4> <p class="p2">30.974</p></li>
+					<li class = "element" id="As"> <p class="p1">33</p> <h4>As</h4> <p class="p2">74.922</p></li>
+					<li class = "element" id="Sb"> <p class="p1">51</p> <h4>Sb</h4> <p class="p2">121.76</p></li>
+					<li class = "element" id="Bi"> <p class="p1">83</p> <h4>Bi</h4> <p class="p2">208.98</p></li>
+					<li class = "element" id="Uup"> <p class="p1">115</p> <h4>Uup</h4> <p class="p2">[288.19]</p></li>
+				</ul>
+				<ul id="yellow4">
+					<li class = "element" id="O"> <p class="p1">8</p> <h4>O</h4> <p class="p2">15.999</p></li>
+					<li class = "element" id="S"> <p class="p1">16</p> <h4>S</h4> <p class="p2">32.06</p></li>
+					<li class = "element" id="Se"> <p class="p1">34</p> <h4>Se</h4> <p class="p2">78.96</p></li>
+					<li class = "element" id="Te"> <p class="p1">52</p> <h4>Te</h4> <p class="p2">127.60</p></li>
+					<li class = "element" id="Po"> <p class="p1">84</p> <h4>Po</h4> <p class="p2">[208.98]</p></li>
+					<li class = "element" id="Lv"> <p class="p1">116</p> <h4>Lv</h4> <p class="p2">[293]</p></li>
+				</ul>
+				<ul id="yellow5">
+					<li class = "element" id="F"> <p class="p1">8</p> <h4>F</h4> <p class="p2">18.998</p></li>
+					<li class = "element" id="Cl"> <p class="p1">17</p> <h4>Cl</h4> <p class="p2">35.45</p></li>
+					<li class = "element" id="Br"> <p class="p1">35</p> <h4>Br</h4> <p class="p2">79.904</p></li>
+					<li class = "element" id="I"> <p class="p1">53</p> <h4>I</h4> <p class="p2">126.90</p></li>
+					<li class = "element" id="At"> <p class="p1">85</p> <h4>At</h4> <p class="p2">[209.99]</p></li>
+					<li class = "element" id="Uus"> <p class="p1">117</p> <h4>Uus</h4> <p class="p2">[294]</p></li>
+				</ul>
+				<ul id="yellow6">
+					<li class = "element" id="He"> <p class="p1">2</p> <h4>He</h4> <p class="p2">4.0026</p></li>
+					<li class = "element" id="Ne"> <p class="p1">10</p> <h4>Ne</h4> <p class="p2">20.180</p></li>
+					<li class = "element" id="Ar"> <p class="p1">18</p> <h4>Ar</h4> <p class="p2">39.948</p></li>
+					<li class = "element" id="Kr"> <p class="p1">35</p> <h4>Kr</h4> <p class="p2">83.798</p></li>
+					<li class = "element" id="Xe"> <p class="p1">54</p> <h4>Xe</h4> <p class="p2">131.29</p></li>
+					<li class = "element" id="Rn"> <p class="p1">86</p> <h4>Rn</h4> <p class="p2">[222.02]</p></li>
+					<li class = "element" id="Uuo"> <p class="p1">118</p> <h4>Uuo</h4> <p class="p2">[294]</p></li>
+				</ul>
+		    </div>
+
+
+		    <div class="green">
+		    	<ul id="green1">
+					<li class = "element" id="La"> <p class="p1">57</p> <h4>La</h4> <p class="p2">138.91</p></li>
+					<li class = "element" id="Ac"> <p class="p1">89</p> <h4>Ac</h4> <p class="p2">[227.03]</p></li>
+				</ul>
+				<ul id="green2">
+					<li class = "element" id="Ce"> <p class="p1">58</p> <h4>Ce</h4> <p class="p2">140.12</p></li>
+					<li class = "element" id="Th"> <p class="p1">90</p> <h4>Th</h4> <p class="p2">232.04</p></li>
+				</ul>
+				<ul id="green3">
+					<li class = "element" id="Pr"> <p class="p1">59</p> <h4>Pr</h4> <p class="p2">140.91</p></li>
+					<li class = "element" id="Pa"> <p class="p1">91</p> <h4>Pa</h4> <p class="p2">231.04</p></li>
+				</ul>
+				<ul id="green4">
+					<li class = "element" id="Nd"> <p class="p1">60</p> <h4>Nd</h4> <p class="p2">144.24</p></li>
+					<li class = "element" id="U"> <p class="p1">92</p> <h4>U</h4> <p class="p2">238.03</p></li>
+				</ul>
+				<ul id="green5">
+					<li class = "element" id="Pm"> <p class="p1">61</p> <h4>Pm</h4> <p class="p2">[144.91]</p></li>
+					<li class = "element" id="Np"> <p class="p1">93</p> <h4>Np</h4> <p class="p2">[237.05]</p></li>
+				</ul>
+				<ul id="green6">
+					<li class = "element" id="Sm"> <p class="p1">62</p> <h4>Sm</h4> <p class="p2">150.36</p></li>
+					<li class = "element" id="Pu"> <p class="p1">94</p> <h4>Pu</h4> <p class="p2">[244.06]</p></li>
+				</ul>
+				<ul id="green7">
+					<li class = "element" id="Eu"> <p class="p1">63</p> <h4>Eu</h4> <p class="p2">151.96</p></li>
+					<li class = "element" id="Am"> <p class="p1">95</p> <h4>Am</h4> <p class="p2">[243.06]</p></li>
+				</ul>
+				<ul id="green8">
+					<li class = "element" id="Gd"> <p class="p1">64</p> <h4>Gd</h4> <p class="p2">157.25</p></li>
+					<li class = "element" id="Cm"> <p class="p1">96</p> <h4>Cm</h4> <p class="p2">[247.07]</p></li>
+				</ul>
+				<ul id="green9">
+					<li class = "element" id="Tb"> <p class="p1">65</p> <h4>Tb</h4> <p class="p2">158.93</p></li>
+					<li class = "element" id="Bk"> <p class="p1">97</p> <h4>Bk</h4> <p class="p2">[247.07]</p></li>
+				</ul>
+				<ul id="green10">
+					<li class = "element" id="Dy"> <p class="p1">66</p> <h4>Dy</h4> <p class="p2">162.50</p></li>
+					<li class = "element" id="Cf"> <p class="p1">98</p> <h4>Cf</h4> <p class="p2">[251.08]</p></li>
+				</ul>
+				<ul id="green11">
+					<li class = "element" id="Ho"> <p class="p1">67</p> <h4>Ho</h4> <p class="p2">164.93</p></li>
+					<li class = "element" id="Es"> <p class="p1">99</p> <h4>Es</h4> <p class="p2">[252.08]</p></li>
+				</ul>
+				<ul id="green12">
+					<li class = "element" id="Er"> <p class="p1">68</p> <h4>Er</h4> <p class="p2">167.26</p></li>
+					<li class = "element" id="Fm"> <p class="p1">100</p> <h4>Fm</h4> <p class="p2">[257.10]</p></li>
+				</ul>
+				<ul id="green13">
+					<li class = "element" id="Tm"> <p class="p1">69</p> <h4>Tm</h4> <p class="p2">168.93</p></li>
+					<li class = "element" id="Md"> <p class="p1">101</p> <h4>Md</h4> <p class="p2">[258.10]</p></li>
+				</ul>
+				<ul id="green14">
+					<li class = "element" id="Yb"> <p class="p1">70</p> <h4>Yb</h4> <p class="p2">173.05</p></li>
+					<li class = "element" id="No"> <p class="p1">102</p> <h4>No</h4> <p class="p2">[259.10]</p></li>
+				</ul>
+			</div>
+
+		</div>
     </body>
 </html>

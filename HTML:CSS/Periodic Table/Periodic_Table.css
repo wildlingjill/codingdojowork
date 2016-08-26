@@ -1,0 +1,156 @@
+html, body{
+	font-size: 12px;
+	font-family: arial, verdana, sans-serif;
+	font-weight: 200;
+}
+
+h4{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.group_period{
+	font-weight: lighter;
+	/*display:inline-block;*/
+}
+
+.group_period #group{
+	 display: block;
+	 position: absolute;
+	 top: 0px;
+	 left: 0px;
+}
+
+.group_period #period{
+	display: block;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+
+.rows{
+	color:red;
+}
+
+.rows h4{
+	font-size: 13px;
+}
+
+.rows ol{
+	list-style: none;
+	display: inline-block;
+}
+
+.rows ol li {
+	padding-right: 10px !important;
+}
+
+.columns{
+	color:red;
+}
+
+.columns ol{
+	list-style: none;
+}
+
+.columns ol li{
+	display: inline-block;
+}
+
+.lanth_act{
+	color:red;
+}
+
+.lanth_act ul{
+	list-style: none;
+}
+
+.table ul{
+	list-style: none;
+	display: inline-block;
+	text-align:center;
+}
+
+.table ul li{
+	border: 1px solid black;
+	margin:0px;
+	margin-bottom: 2px;
+	padding: 0px;
+	height: 45px;
+	width: 45px;
+}
+
+.table h4{
+	margin:0px;
+	color: midnightblue;
+	font-size: 16px;
+	margin-top: 3px;
+}
+
+.p1{
+	margin:0px;
+	font-size: 10px;
+}
+
+.p2{
+	margin:0px;
+	
+	font-size: 10px;
+}
+
+.blue{
+	display: inline-block;
+}
+
+.blue ul li{
+	background-color: rgb(89,141,250);
+}
+
+.blue ul{
+	padding-left: 0px;
+}
+
+#blue1{
+	padding-left: 50px;
+}
+
+.pink{
+	display: inline-block;
+}
+
+.pink ul li{
+	background-color: rgb(236,143,139);
+}
+
+.pink ul{
+	padding-left: 0px;
+}
+
+#pink1{
+	padding-left: 10px;
+}
+
+.yellow{
+	display: inline-block;
+}
+
+.yellow ul li{
+	background-color: rgb(247,191,39);
+}
+
+.yellow ul{
+	padding-left: 0px;
+}
+
+
+.green ul li{
+	background-color: rgb(82,182,29);
+}
+
+.green ul{
+	padding-left: 0px;
+}
+
+#green1{
+	padding-left: 161px;
+}
