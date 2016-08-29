@@ -25,6 +25,15 @@
 		height:28px;
 		position:absolute;
 	}
+
+	.enemy2{
+		background: url('1942.gif');
+		background-position: -60px -10px;
+		width:28px;
+		height:28px;
+		position:absolute;
+	}
+
 	.bullet{
 		background: url('1942.gif');
 		background-position: -185px -400px;
@@ -67,6 +76,8 @@
 
 	var bullets = [];
 
+	var container = document.getElementById('container');
+
 	function displayHero(){
 		document.getElementById('hero').style["top"] = hero.y + "px";
 		document.getElementById('hero').style["left"] = hero.x + "px";
@@ -74,8 +85,11 @@
 
 	function displayEnemies(){
 		var output = "";
-		for (var i = 0; i < enemies.length; i++){
+		for (var i = 0; i < 4; i++){
 			output += "<div class='enemy1' style='top:" + enemies[i].y + "px; left:" + enemies[i].x + "px;'></div>";
+		}
+		for (var i = 4; i < enemies.length; i++){
+			output += "<div class='enemy2' style='top:" + enemies[i].y + "px; left:" + enemies[i].x + "px;'></div>";
 		}
 		document.getElementById('enemies').innerHTML = output;
 	}

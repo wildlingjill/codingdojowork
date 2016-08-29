@@ -1,63 +1,125 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/common_iteration_3.css">
-	<link rel="stylesheet" href="static/css/common.css">
-	<script src="static/js/jquery-1.11.0.min.js"></script>
-	<script src="static/js/bootstrap.js"></script>
-	<script src="static/js/portfolio.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/portfolio">Portfolio</a>
-			</div>
+	<head>
+		<meta charset="UTF-8">
+		<title>Jill's Portfolio</title>
 
-			<ul class="nav navbar-nav">
-				<li><a href="/portfolio/index_default.html">Default Template</a></li>
-				<li><a href="/portfolio/index_iteration_1.html">Version 1</a></li>
-				<li><a href="/portfolio/index_iteration_2.html">Version 2</a></li>
-				<li class="active"><a href="/portfolio/index_iteration_3.html">Version 3</a></li>
-				<li>
-					<a href="https://github.com/ashrock/portfolio_templates" target="_blank">
-						<span class="git-icon"></span>&nbsp;Check the codes in Github
-					</a>
-				</li>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$( function() {
+			    $( "#tabs" ).tabs();
+			} );	
+
+			// $(".nav-pills li a").hover(function(){
+			// 	$(this).css("color", "black");
+			// })
+
+			$(".nav-pills li a").hover(function(){
+			    $(this).css("background-color", "white");
+			    $(this).css("color", "black")
+			    }, function(){
+			    $(this).css("background-color", "grey");
+			    $(this).css("color", "white");
+			    $(".nav-pills li.active a").css("background-color", "black");
+			});
+
+		})
+
+			
+
+
+		</script>
+
+		<style>
+
+		.panel-body p{
+			width: 500px;
+		}
+
+		.jumbotron{
+			border: 1px solid grey;
+			padding: 10px;
+		}
+
+		.junbotron h4{
+			border-bottom: 1px solid grey;
+		}
+
+		.jumbotron p{
+			font-size: 15px;
+		}
+
+		.nav-pills {
+			background-color: grey;
+		}
+
+		.nav-pills li.active a{
+			background-color: black;
+		}
+
+		.nav-pills li a{
+			color: white;
+		}
+
+
+
+
+
+		</style>
+
+	</head>
+	<body>
+		<div class="page-header">
+			<img src="jill_robinson.jpg" class="img-thumbnail col-md-1" alt="My face" height=100 width=100>
+			<h1 class="page-title col-md-11">Jill Robinson <small>Portfolio</small></h1>
+		</div>
+
+		<div class="navbar">
+			<ul class="nav nav-pills nav-justified col-lg-12">
+				<li role="presentation" class="active"><a href="#">Portfolio</a></li>
+				<li role="presentation"><a href="https://github.com/wildlingjill">GitHub</a></li>
+				<li role="presentation"><a href="https://www.linkedin.com/in/jillcrobinson">LinkedIn</a></li>
 			</ul>
 		</div>
-	</nav>
-	
-	<div id="wrapper" class="container">
+		<div class="container">
 
-		<div id="student_description">
-			<div class="media-group">
-				<div class="media">
-					<img src="jill_robinson.jpg" alt="" class="img-responsive img-thumbnail media-object pull-left">
-					<div class="media-body">
-						<h1 class="media-heading">Jill Robinson's<small> Portfolio</small></h1>
-						<p>Jill is from Newcastle-upon-Tyne in the UK, and originally studied for 8 years to get a doctorate in Microbiology from Newcastle University. She then realised that was completely useless for jobs in the Bay Area, and decided to retrain as a programmer instead!</p>
+			<div class="jumbotron">
+		    	<h4>Bio</h4>
+		    	<p>Jill is from Newcastle-upon-Tyne in the UK, and originally studied for 8 years to get a doctorate in Microbiology from Newcastle University. She then realised that was completely useless for getting jobs in the Bay Area, and decided to retrain as a programmer instead.</p>
+		    </div>
+			<div class="row">
+				<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1">Project 1</a></li>
+					    <li><a href="#tabs-2">Project 2</a></li>
+					    <li><a href="#tabs-3">Project 3</a></li>
+					</ul>
+					<div id="tabs-1">
+					    	<p>Description of Project 1 from the Coding Dojo Bootcamp.</p>
 					</div>
-				</div>
+					<div id="tabs-2">
+					    	<p>Description of Project 2 from the Coding Dojo Bootcamp.</p>
+					</div>
+					<div id="tabs-3">
+					   		<p>Description of Project 3 from the Coding Dojo Bootcamp.</p>
+					</div>
+				</div>				
 			</div>
 		</div>
-
-
-		<div id="portfolio_content">
-			<p><a href="https://github.com/wildlingjill">GitHub account</a></p>
-			<p><a href="https://www.linkedin.com/in/jillcrobinson">LinkedIn account</a></p>
-			<p><a href="#">Resume</a></p>
-			
-
-				
-			
-
-				
-			
-		</div>
-	</div>
-</body>
+	</body>
 </html>
