@@ -16,14 +16,14 @@
 
 			$(document).ready(function(){
 
-				$("button").click(function(){
-					if($("#name:text").is(":empty")){
-						alert("You must enter your name!");
-					} else if ($("#name").val() === ""){
-						$("form").submit(function(){
-							alert("Thanks " + $("#name") + "! Your cruise leaves on " + $("#from") + " and returns on " + $("#to") + "!");
-							return false;
-						});
+				$("button").click(function(event){
+					event.preventDefault();
+					var name = $("#name").val();
+					if(name){
+						$("form").submit();
+						alert("Thanks " + $("#name").val() + "! Your cruise leaves on " + $("#from").val() + " and returns on " + $("#to").val() + "!");
+					} else {
+						alert("You must enter your name!");		
 					}	
 				});
 				
