@@ -279,6 +279,11 @@
 
 			// math.floor(math.random)
 		// setInterval(function(){ alert("Hello"); }, 3000);
+
+		function displayBlueGhost(){
+			document.getElementById('blue_ghost').style.left = blue_ghost.x*20 + "px";
+			document.getElementById('blue_ghost').style.top = blue_ghost.y*20 + "px";
+		};
 		
 		function moveGhost(){
 			var directions = ["left", "right", "up", "down"];
@@ -310,10 +315,6 @@
 
 		};
 
-		function displayBlueGhost(){
-			document.getElementById('blue_ghost').style.left = blue_ghost.x*20 + "px";
-			document.getElementById('blue_ghost').style.top = blue_ghost.y*20 + "px";
-		};
 
 		function displayScore(){
 			document.getElementById('score').innerHTML = score;
