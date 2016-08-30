@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang='en'>
+
+  	<head>
+    	<meta charset="utf-8">
+    	<title>FrameworkTest</title>
+  	</head>
+
+  	<style> 
+
+  		html, body{
+  			font-family: verdana, sans-serif;
+  			font-size: 1em;
+  		}
+
+  		.header {
+  			background-color: lightgrey;
+  			padding-left: 2.5em;
+  			height: 6.56em;
+  		}
+
+  		.header h1{
+  			margin: 0em;
+  			padding: 0.625rem;
+  		}
+
+  		.header h3{
+  			margin: 0em;
+  			padding: 0.625rem;
+  		}
+
+  		#navbar {
+  			padding-left: 0em;
+  		}
+
+  		#navbar li{
+  			display: inline-block;
+  			list-style: none;
+  			border: 1px solid black;
+  			background-color: lightgrey;
+  			padding: 0.313em;
+  			position: relative;
+  		}
+
+  		#navbar li a{
+  			color: purple;
+  		}
+
+
+	  	/* Small sized screens */
+	    @media only screen and (max-width: 480px) {
+	    	.four-s { width: 33.333333%; }
+	    	.twelve-s { width: 100%; }
+	    }
+	    /* Medium sized screens */
+	    @media only screen and (min-width: 481px) {
+	    	.four-m { width: 33.333333%; }
+	    	.twelve-m { width: 100%; }
+	    }
+	    /* Large sized screens */
+	    @media only screen and (min-width: 1024px) {
+	    	.three-l { width: 25%; }
+	    	
+	    }
+
+	    .column { float: left; }
+
+	   /* @media only screen and (min-width: 899px){
+	    	#navbar { width: 100%; }
+	    }*/
+
+	    @media only screen and (max-width: 898px){
+	    	#navbar {display: none;}
+	    }
+
+  	</style>
+
+
+  	<body>
+  	 	<div id="wrapper">
+  	 		<div class="header twelve-s twelve-m twelve-l">
+	      		<h1>Header</h1>
+	      		<h3>Subtitle</h3>
+	      	</div>
+
+      		<div class="row">
+        		<div>
+          			<ul id="navbar">
+          				<li><a href="#">Home</a></li>
+          				<li><a href="#">About Us</a></li>
+          				<li><a href="#">Contact Us</a></li>
+          				<li><a href="#">Videos</a></li>
+          				<li><a href="#">Pricing</a></li>
+          				<li><a href="#">Something</a></li>
+          				<li><a href="#">Something more...</a></li>
+          				<li><a href="#">Something even more...</a></li>
+          			</ul>
+          		</div>
+          	</div>
+          	<div class="row">
+          		<div class="column four-s four-m three-l">
+          			<h4>Lorem ipsum</h4>
+          			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id est convenienter naturae vivere, a natura discedere. Vitae autem degendae ratio maxime quidem illis placuit quieta. Nescio quo modo praetervolavit oratio. Quae cum essent dicta, finem fecimus et ambulandi et disputandi. Duo Reges: constructio interrete. Haec et tu ita posuisti, et verba vestra sunt. Eiuro, inquit adridens, iniquum, hac quidem de re; Conferam avum tuum Drusum cum C.</p>
+          		</div>
+          		<div class="column four-s four-m three-l">
+          			<h4>Omnia peccata</h4>
+          			<p>Omnia peccata paria dicitis. Non autem hoc: igitur ne illud quidem. Stoici autem, quod finem bonorum in una virtute ponunt, similes sunt illorum; Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Quamquam tu hanc copiosiorem etiam soles dicere. Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster? Nemo nostrum istius generis asotos iucunde putat vivere. Nihil ad rem! Ne sit sane; Itaque ab his ordiamur. Et quod est munus, quod opus sapientiae?</p>
+          		</div>
+          		<div class="column four-s four-m three-l">
+          			<h4>Nullum inveniri</h4>
+          			<p>Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. Illa videamus, quae a te de amicitia dicta sunt. Sed ad haec, nisi molestum est, habeo quae velim. Quis hoc dicit? Quod autem principium officii quaerunt, melius quam Pyrrho;</p>
+          		</div>
+          		<div class="column twelve-s twelve-m three-l">
+          			<h4>Beatus autem</h4>
+          			<p>Beatus autem esse in maximarum rerum timore nemo potest. Avaritiamne minuis? Quorum sine causa fieri nihil putandum est. Que Manilium, ab iisque M. Frater et T. Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Nam ista vestra: Si gravis, brevis; Non quam nostram quidem, inquit Pomponius iocans;</p>
+          		</div>
+          	</div>
+        </div>
+
+  	</body>
+
+</html>
