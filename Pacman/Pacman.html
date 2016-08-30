@@ -288,19 +288,20 @@
 		function moveGhost(){
 			var directions = ["left", "right", "up", "down"];
 			var randomDirection = directions[Math.floor(Math.random()*directions.length)];
-			if (randomDirection === "left" && world[blue_ghost.x-1][blue_ghost.y] !== 2){
+			if (randomDirection === "left" && world[blue_ghost.y][blue_ghost.x-1] !== 2){
 				blue_ghost.x--;
-			} else if(randomDirection === "right" && world[blue_ghost.x+1][blue_ghost.y] !== 2){
+			} else if(randomDirection === "right" && world[blue_ghost.y][blue_ghost.x+1] !== 2){
 				blue_ghost.x++;
-			} else if(randomDirection === "up" && world[blue_ghost.x][blue_ghost.y+1] !== 2){
+			} else if(randomDirection === "up" && world[blue_ghost.y+1][blue_ghost.x] !== 2){
 				blue_ghost.y++;
-			} else if(randomDirection === "down" && world[blue_ghost.x][blue_ghost.y-1] !== 2){
+			} else if(randomDirection === "down" && world[blue_ghost.y-1][blue_ghost.x] !== 2){
 				blue_ghost.y--;
 			}
 			displayBlueGhost();
+			decidePacmanAction();
 		}
 
-		setInterval(moveGhost, 500);
+		setInterval(moveGhost, 300);
 
 		var pacmanElement = document.getElementById('pacman');
 
@@ -326,9 +327,10 @@
 
 		displayWorld();
 		displayPacman();
-		// displayBlueGhost();
+		displayBlueGhost();
 		displayScore();
 		displayLives();
+		
 
 		
 
@@ -352,6 +354,7 @@
 			}
 			displayPacman();
 			decidePacmanAction();
+			
 		}
 
 
@@ -369,10 +372,16 @@
 				displayWorld();
 				displayScore();
 
-			} else if(world[pacman.y][pacman.x] === world[blue_ghost.x][blue_ghost.y] && lives > 0){
+			} else if(pacman.y === blue_ghost.y && pacman.x === blue_ghost.x){
 				lives -= 1;
+				pacman.y = 17;
+				pacman.x = 1;
 				displayWorld();
-				displayLives();
+				displayLives();	
+				if (lives === 0) {
+					alert("Game over!");
+				}
+				
 			}
 			// console.log(e.keyCode);
 
