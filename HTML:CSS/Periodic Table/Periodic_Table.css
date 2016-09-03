@@ -2,6 +2,8 @@ html, body{
 	font-size: 12px;
 	font-family: arial, verdana, sans-serif;
 	font-weight: 200;
+	margin: 0px;
+	padding: 0px;
 }
 
 h4{
@@ -19,6 +21,7 @@ h4{
 	 position: absolute;
 	 top: 0px;
 	 left: 0px;
+	 margin-left: 20px;
 }
 
 .group_period #period{
@@ -88,12 +91,12 @@ h4{
 }
 
 .p1{
-	margin:0px;
+	margin-top:3px;
 	font-size: 10px;
 }
 
 .p2{
-	margin:0px;
+	margin-top:0px;
 	
 	font-size: 10px;
 }
@@ -153,4 +156,5 @@ h4{
 
 #green1{
 	padding-left: 161px;
+	padding-top: 20px;
 }

@@ -1,0 +1,56 @@
+1. select sum(billing.amount) from billing
+where billing.charged_datetime like '2012-03-% %:%:%';
+
+2. select clients.client_id, CONCAT_WS(' ', clients.first_name, clients.last_name) as client_name, sum(billing.amount) from clients
+join billing on clients.client_id = billing.client_id
+where clients.client_id = 2;
+
+3. select * from sites
+join clients on sites.client_id = clients.client_id
+where clients.client_id = 10;
+
+4. select count(sites.domain_name), sites.created_datetime, clients.client_id from sites
+join clients on sites.client_id = clients.client_id
+where clients.client_id = 1 OR clients.client_id = 20
+group by MONTH(sites.created_datetime)
+order by sites.created_datetime DESC;
+
+5. select sites.domain_name, leads.registered_datetime, count(leads.leads_id) from sites
+join leads on sites.site_id = leads.site_id
+where leads.registered_datetime between '2011-01-01 %:%:%' and '2011-02-15 %:%:%' 
+group by sites.domain_name;
+
+6. select CONCAT_WS(' ', clients.first_name, clients.last_name) AS client_name, count(leads.leads_id), leads.registered_datetime from clients
+join sites on clients.client_id = sites.client_id
+join leads on sites.site_id = leads.site_id
+where leads.registered_datetime between '2011-01-01 %:%:%' and '2011-12-31 %:%:%' 
+group by client_name;
+
+7. select CONCAT_WS(' ', clients.first_name, clients.last_name) AS client_name, count(leads.leads_id), leads.registered_datetime from clients
+join sites on clients.client_id = sites.client_id
+join leads on sites.site_id = leads.site_id
+where year(leads.registered_datetime) = '2011' and month(leads.registered_datetime) <= '6' 
+group by month(leads.registered_datetime), client_name;
+
+8. select CONCAT_WS(' ', clients.first_name, clients.last_name) AS client_name, sites.domain_name, count(leads.leads_id), leads.registered_datetime from clients
+join sites on clients.client_id = sites.client_id
+join leads on sites.site_id = leads.site_id
+where leads.registered_datetime between '2011-01-01 %:%:%' and '2011-12-31 %:%:%' 
+group by sites.domain_name
+order by client_name;
+
+select CONCAT_WS(' ', clients.first_name, clients.last_name) AS client_name, sites.domain_name, count(leads.leads_id), leads.registered_datetime from clients
+join sites on clients.client_id = sites.client_id
+join leads on sites.site_id = leads.site_id
+group by sites.domain_name
+order by client_name;
+
+9. select clients.client_id, CONCAT_WS(' ', clients.first_name, clients.last_name) as client_name, billing.charged_datetime, sum(billing.amount) from clients
+join billing on clients.client_id = billing.client_id
+group by month(billing.charged_datetime), client_name
+order by client_name, billing.charged_datetime ASC;
+
+10. select CONCAT_WS(' ', clients.first_name, clients.last_name) as client_name, group_concat(' ', sites.domain_name) as sites from clients
+join sites on clients.client_id = sites.client_id
+group by client_name
+order by client_name;
