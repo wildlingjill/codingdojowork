@@ -16,18 +16,22 @@ h4{
 	/*display:inline-block;*/
 }
 
-.group_period #group{
+#group{
 	 display: block;
 	 position: absolute;
 	 top: 0px;
-	 left: 0px;
-	 margin-left: 20px;
+	 left: 28px;
+	 
 }
 
-.group_period #period{
+#group li {
+	padding-left: 38px;
+}
+
+#period{
 	display: block;
 	position: absolute;
-	top: 50px;
+	top: 150px;
 	left: 0px;
 }
 
