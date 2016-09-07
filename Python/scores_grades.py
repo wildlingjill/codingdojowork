@@ -3,7 +3,7 @@ from random import randint
 
 print "Scores and Grades"
 for count in range(0, 10):
-	score = randint(70, 100)
+	score = randint(60, 100)
 
 	if(score <= 70):
 		grade = "D"
@@ -16,4 +16,4 @@ for count in range(0, 10):
 
 	print "Score: %d; Your grade is %s" %(score, grade)
 
-print "End of program. Bye!"
+# print "End of program. Bye!"
