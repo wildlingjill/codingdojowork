@@ -1,0 +1,62 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<div id="myContainerElement"></div>
+	</body>
+</html>
+
+
+<script src="http://www.bluesuncorp.co.uk/icv4/dist/paypal.checkout.v4.js" data-paypal-checkout></script>
+
+<script>
+    ppxo.Button.render({
+
+        // Pass the client ID to use to create your transaction
+
+        clientID: {
+            sandbox:  'AYdjEHTDEOM9HEI1J6GRJRdh-P1mzFmI4lZUtN_ECZS93iUZql8uPaIdzFhMaE1NqNi2sYUzN_T_yzWP',
+            production: 'ATSfYKUOxGx4go5-NeSu3MFyFPmvn_MYRuWFxGv1jLK6lfOBafe8q5Rw5SUcK60h6YBANd0o8pnsju6g'
+        },
+
+        // Pass the payment details for your transaction
+
+        paymentDetails: {
+            transactions: [
+                {
+                    amount: {
+                        total: '1.00',
+                        currency: 'USD'
+                    }
+                }
+            ]
+        },
+
+        // Automatically execute the payment on paypal.com when the buyer clicks 'Pay Now'
+
+        payNow: true,
+
+        // Pass a function to be called when the customer completes the payment
+
+        onPaymentComplete: function(data) {
+            console.log('The payment was completed!');
+        },
+
+        // Pass a function to be called when the customer cancels the payment
+
+        onPaymentCancel: function(data) {
+            console.log('The payment was cancelled!');
+        },
+
+
+        buttonStyle: {
+	        size:  'medium', // tiny, small, medium
+	        color: 'blue', // orange, blue
+	        shape: 'pill'    // pill, rect
+    }
+
+
+    }, '#myContainerElement');
+
+
+</script>

@@ -3,12 +3,19 @@
         <title>Form Test Index</title>
     </head>
     <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <form action='/result' method='post'>
         Name: <input type='text' name='name'>
         Dojo Location: <input type='text' name='dojo_location'>
         Favourite Language: <input type='text' name='favourite_language'>
         Comment (optional): <input type='text' name='comment'>
-        Button<input type='submit' value='button'>
+        Submit<input type='submit' value='button'>
         </form>
     </body>
 </html>

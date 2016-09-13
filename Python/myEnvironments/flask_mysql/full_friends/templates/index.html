@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Full Friends</title>
+	</head>
+	<body>
+		<h1>These are all my friends!</h1>
+		<!-- with all the data we can then construct a more structured output -->
+		{% for friend in all_friends: %}
+			<p>ID: {{ friend['id'] }}</p>
+			<p>First Name: {{ friend['first_name'] }}</p>
+			<p>Last Name: {{ friend['last_name'] }}</p>
+			<p>Email Address: {{ friend['email_address'] }}</p>
+			<form action="/friends/{{friend['id']}}/edit" method='get'>
+				<button name="action" value="edit">Edit friend</button>
+			</form>
+			<form action="/friends/{{friend['id']}}/delete" method='post'>
+				<button name='action' value="destroy">Delete friend</button>
+			</form>
+			<hr>
+		{% endfor %}
+
+		<hr>
+
+		<h2>Add a Friend</h2>
+		<form action='/friends' method='POST'>
+			<label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+			<label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+			<label for="email_address">Email Address:<input type="text" name="email_address" id="email_address"></label>
+			<input type="submit" value="Add">
+		</form>
+		<hr>
+
+
+	</body>
+
+</html>

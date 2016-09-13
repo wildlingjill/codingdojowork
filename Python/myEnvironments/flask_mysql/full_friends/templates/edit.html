@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Friends</title>
+	</head>
+	<body>
+
+		{{one_friend['id']}}
+		{{one_friend['first_name']}}
+		{{one_friend['last_name']}}
+		{{one_friend['email_address']}}
+		{{one_friend['created_at']}}
+
+		
+		<form action="/friends/{{one_friend['id']}}" method='POST'>
+			<p>ID: {{ one_friend['id'] }}</p>
+			<label for="first_name">First Name: <input type="text" name="first_name" value="{{one_friend['first_name']}}" id="first_name"></label>
+			<label for="last_name">Last Name: <input type="text" name="last_name" value="{{one_friend['last_name']}}" id="last_name"></label>
+			<label for="email_address">Email Address: <input type="text" name="email_address" value="{{one_friend['email_address']}}" id="email_address"></label>
+			<button name="action" value="update">Edit Friend</button>
+		</form>
+		<form action="/friends/{{one_friend['id']}}/delete" method='POST'>
+			<button name="action" value="remove">Delete Friend</button>
+		</form>
+		<form action="/" method='get'>
+			<button name="action" value="home">Return to Home</button>
+		</form>
+
+	<hr>
