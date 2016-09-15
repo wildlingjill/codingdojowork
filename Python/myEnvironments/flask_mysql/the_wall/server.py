@@ -37,9 +37,11 @@ def register():
 	 			 'pw_hash': pw_hash
 	 		   }
 	 	# Run query, with dictionary values injected into the query.
-	 	mysql.query_db(query, data)
-	 	session['first_name'] = first_name
-	 	session['email'] = email
+	 	user = mysql.query_db(query, data)
+	 	session['first_name'] = user['first_name']
+		session['last_name'] = user['last_name']
+		session['email'] = user['email']
+		session['id'] = user['id']
 		return redirect('/wall')
 
 @app.route('/login', methods=['post'])
@@ -53,31 +55,54 @@ def login():
 		session['first_name'] = user['first_name']
 		session['last_name'] = user['last_name']
 		session['email'] = user['email']
-		session['user_id'] = user['id']
-		print session
+		session['id'] = user['id']
+		print session.items()
 		return redirect('/wall')
 	else: 
 		flash('Password is incorrect!')
 		return redirect('/')
 
+
 @app.route('/wall', methods=['get'])
 def wall():
-	# messages = mysql.query_db("SELECT * FROM messages")
-	return render_template('wall.html', first_name=session['first_name'])
+	query = """SELECT * from messages left join users on messages.user_id=users.id order by messages.created_at desc"""
+ 	messages = mysql.query_db(query)
+	return render_template('wall.html', messages=messages)
 
 
 @app.route('/message', methods=['post'])
 def postMessage():
-	message = request.form['message']
-	userID = session['user_id']
+	print session.items()
+	message_content = request.form['message']
+	userID = session['id']
 	query = """INSERT INTO messages (message, user_id, created_at, updated_at) VALUES (:message, :user_id, NOW(), NOW())"""
 	 	# We'll then create a dictionary of data from the POST data received.
 	data = {
- 			 'message': message,
+ 			 'message': message_content,
  			 'user_id': userID
  		   }
  	# Run query, with dictionary values injected into the query.
  	mysql.query_db(query, data)
+	return redirect('/wall')
+
+
+@app.route('/comment', methods=['post'])
+def postComment():
+	print session.items()
+	comment = request.form['comment']
+	userID = session['id']
+	messageID = session['message_id']
+	query = """INSERT INTO comments (comment, user_id, message_id, created_at, updated_at) VALUES (:message, :user_id, :message_id, NOW(), NOW())"""
+	 	# We'll then create a dictionary of data from the POST data received.
+	data = {
+ 			 'comment': comment,
+ 			 'user_id': userID,
+ 			 'message_id': messageID
+ 		   }
+ 	# Run query, with dictionary values injected into the query.
+ 	mysql.query_db(query, data)
+ 	query2 = """SELECT * from comments left join users on messages.user_id=users.id left join messages on comments.message_id=messages.id"""
+ 	comments = mysql.query_db(query)
 	return redirect('/wall')
 
 

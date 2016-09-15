@@ -7,10 +7,11 @@
 	<body>
 		<div class='navbar'>
 			<h1>CodingDojo Wall</h1>
-			<h4>Welcome {{first_name}}</h4>
+			<h4>Welcome {{session['first_name']}}</h4>
 			<form action = '/' method="get">
 				<button name='action' value='logout'>Log off</button>
 			</form>
+			<hr>
 		</div>
 			<form action = '/message' method="post">
 				Post a message:<br>
@@ -19,21 +20,22 @@
 			</form>
 			  
 		<div>
-			<hr>
+			{% for message in messages %}
+				<h5>{{message['first_name']}} {{message['last_name']}} - {{message['created_at']}}</h5>
+				<p>{{message['message']}}</p>
+				{% for comment in comments %}
+					<h5>{{username}}{{created_at}}</h5>
+					<p>{{comment}}</p>
+					<form action = '/comment' method="post">
+						Post a comment:<br>
+						<input type="text" name="comment" id="comment">
+						<br><input type="submit" value="Post a Comment">
+					</form>
+				{% endfor %}
+			{% endfor %}
 		</div>
 	</body>
 </html>
 
 
 
-<!-- {% for message in messages %}
-	<p>{{message}}</p>
-	{% for comment in comments %}
-		<p>{{comment}}</p>
-		<form action = '/comment' method="post">
-			Post a comment:<br>
-			<input type="text" name="comment" id="comment">
-			<br><input type="submit" value="Post a Comment">
-		</form>
-	{% endfor %}
-{% endfor %} -->
