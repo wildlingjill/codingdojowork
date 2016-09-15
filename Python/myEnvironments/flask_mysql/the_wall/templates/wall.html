@@ -21,17 +21,19 @@
 			  
 		<div>
 			{% for message in messages %}
-				<h5>{{message['first_name']}} {{message['last_name']}} - {{message['created_at']}}</h5>
-				<p>{{message['message']}}</p>
+				<h4>{{ message['first_name'] }} {{ message['last_name'] }} - {{ custom_strftime("%B {S} %Y %I:%M%p", message['messages_created_at']) }}</h4>
+				<p>{{ message['message'] }}</p>
 				{% for comment in comments %}
-					<h5>{{username}}{{created_at}}</h5>
-					<p>{{comment}}</p>
-					<form action = '/comment' method="post">
-						Post a comment:<br>
-						<input type="text" name="comment" id="comment">
-						<br><input type="submit" value="Post a Comment">
-					</form>
+					{% if comment['message_id'] == message['id'] %}
+						<h5>{{ comment['first_name'] }} {{ comment['last_name'] }} - {{ custom_strftime("%B {S} %Y %I:%M%p", comment['comments_created_at']) }}</h5>
+						<p>{{ comment['comment'] }}</p>
+					{% endif %}
 				{% endfor %}
+				<form action = "/comment/{{ message['id'] }}" method="post">
+					Post a comment:<br>
+					<input type="text" name="comment" id="comment">
+					<br><input type="submit" value="Post a Comment">
+				</form>
 			{% endfor %}
 		</div>
 	</body>
