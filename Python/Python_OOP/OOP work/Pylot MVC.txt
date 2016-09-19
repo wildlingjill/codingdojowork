@@ -1,0 +1,10 @@
+MVC = model view controller.
+Flask is a microserver
+MVC is larger and more structured than Flask but more organised
+Model = DB communication, based off the database in mySQL, model is handed everything from database
+Models are capitalised and singular, eg. the Friend model; relate directly to a sql table (assume you have a friend table in the DB).
+View = the html pages - html templates and any variables you pass through the render_template function. HTML/client layer
+Controller = based off the model it controls, lower case and plural, eg. friends controls Friend. Includes methods and info about where to redirect, render templates, validation etc. Validation can also go into model (skinny controller, fat model logic).
+Routes = control urls and redirects and renaming routes. Can modify urls so they look like they’re directing elsewhere. Routes live in config files. 
+“/friends/<friend_id>/edit” lets you assume that there’s a Friend model with an edit method inside it.
+Django is a framework like MVC, but actually MTC - model/template/controller. Have to use regex to read urls, like an MVC mutation rather than an actual framework, so learning Pylot instead of Django.
