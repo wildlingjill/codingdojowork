@@ -31,7 +31,7 @@ def register():
 	if len(first_name) < 2 or len(last_name) < 2 or len(email) < 2 or len(password) < 2:
 		flash('Please enter more than one character!')
 		return redirect('/')
-	elif not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+	elif not re.match(r"^[^@]+@[^@]+\.[^@]+$", email):
 		flash('Email address is invalid!')
 		return redirect('/')
 	else:
